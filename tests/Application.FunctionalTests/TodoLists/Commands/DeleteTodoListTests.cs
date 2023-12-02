@@ -1,10 +1,15 @@
-﻿using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
+﻿// <copyright file="DeleteTodoListTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
 using BonefireECommerce.Application.TodoLists.Commands.DeleteTodoList;
 using BonefireECommerce.Domain.Entities;
 
+namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
+
 using static Testing;
 
-namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
 public class DeleteTodoListTests : BaseTestFixture
 {
     [Test]
@@ -19,7 +24,7 @@ public class DeleteTodoListTests : BaseTestFixture
     {
         var listId = await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List"
+            Title = "New List",
         });
 
         await SendAsync(new DeleteTodoListCommand(listId));

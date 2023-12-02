@@ -1,4 +1,8 @@
-﻿using System.Data.Common;
+﻿// <copyright file="CustomWebApplicationFactory.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Data.Common;
 using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
@@ -9,9 +13,10 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
+namespace BonefireECommerce.Application.FunctionalTests;
+
 using static Testing;
 
-namespace BonefireECommerce.Application.FunctionalTests;
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
     private readonly DbConnection _connection;

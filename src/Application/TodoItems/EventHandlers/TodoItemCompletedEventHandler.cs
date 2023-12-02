@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Domain.Events;
+﻿// <copyright file="TodoItemCompletedEventHandler.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Domain.Events;
 using Microsoft.Extensions.Logging;
 
 namespace BonefireECommerce.Application.TodoItems.EventHandlers;

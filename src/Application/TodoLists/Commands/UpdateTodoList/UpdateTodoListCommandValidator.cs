@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="UpdateTodoListCommandValidator.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 
 namespace BonefireECommerce.Application.TodoLists.Commands.UpdateTodoList;
 public class UpdateTodoListCommandValidator : AbstractValidator<UpdateTodoListCommand>

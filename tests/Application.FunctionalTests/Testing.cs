@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Domain.Constants;
+﻿// <copyright file="Testing.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Domain.Constants;
 using BonefireECommerce.Infrastructure.Data;
 using BonefireECommerce.Infrastructure.Identity;
 using MediatR;
@@ -127,7 +131,8 @@ public partial class Testing
         await context.SaveChangesAsync();
     }
 
-    public static async Task<int> CountAsync<TEntity>() where TEntity : class
+    public static async Task<int> CountAsync<TEntity>()
+        where TEntity : class
     {
         using var scope = _scopeFactory.CreateScope();
 

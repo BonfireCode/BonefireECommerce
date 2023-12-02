@@ -1,4 +1,8 @@
-﻿using System.Runtime.InteropServices;
+﻿// <copyright file="ApplicationDbContextInitialiser.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Runtime.InteropServices;
 using BonefireECommerce.Domain.Constants;
 using BonefireECommerce.Domain.Entities;
 using BonefireECommerce.Infrastructure.Identity;
@@ -97,9 +101,9 @@ public class ApplicationDbContextInitialiser
                 {
                     new TodoItem { Title = "Make a todo list 📃" },
                     new TodoItem { Title = "Check off the first item ✅" },
-                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯"},
+                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯" },
                     new TodoItem { Title = "Reward yourself with a nice, long nap 🏆" },
-                }
+                },
             });
 
             await _context.SaveChangesAsync();

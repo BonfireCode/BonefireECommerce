@@ -5,6 +5,10 @@
         <AssemblyName>BonefireECommerce.Domain.UnitTests</AssemblyName>
     </PropertyGroup>
 
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
         <PackageReference Include="nunit" />
@@ -15,6 +19,10 @@
         <PackageReference Include="NUnit3TestAdapter" />
         <PackageReference Include="coverlet.collector" />
         <PackageReference Include="FluentAssertions" />
+        <PackageReference Include="StyleCop.Analyzers">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>

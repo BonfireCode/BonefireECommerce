@@ -1,7 +1,11 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="DeleteTodoList.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 
 namespace BonefireECommerce.Application.TodoLists.Commands.DeleteTodoList;
-public record DeleteTodoListCommand(int Id) : IRequest;
+public record DeleteTodoListCommand(int Id): IRequest;
 
 public class DeleteTodoListCommandHandler : IRequestHandler<DeleteTodoListCommand>
 {

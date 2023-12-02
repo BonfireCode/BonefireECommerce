@@ -1,9 +1,14 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="LoggingBehaviour.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
 namespace BonefireECommerce.Application.Common.Behaviours;
-public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
+public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest>
+    where TRequest : notnull
 {
     private readonly ILogger _logger;
     private readonly IUser _user;
@@ -27,7 +32,8 @@ public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where T
             userName = await _identityService.GetUserNameAsync(userId);
         }
 
-        _logger.LogInformation("BonefireECommerce Request: {Name} {@UserId} {@UserName} {@Request}",
+        _logger.LogInformation(
+            "BonefireECommerce Request: {Name} {@UserId} {@UserName} {@Request}",
             requestName, userId, userName, request);
     }
 }

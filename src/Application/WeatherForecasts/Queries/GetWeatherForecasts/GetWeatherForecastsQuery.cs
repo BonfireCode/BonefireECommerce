@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿// <copyright file="GetWeatherForecastsQuery.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public record GetWeatherForecastsQuery : IRequest<IEnumerable<WeatherForecast>>;
 
@@ -6,7 +10,7 @@ public class GetWeatherForecastsQueryHandler : IRequestHandler<GetWeatherForecas
 {
     private static readonly string[] Summaries = new[]
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching",
     };
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
@@ -19,7 +23,7 @@ public class GetWeatherForecastsQueryHandler : IRequestHandler<GetWeatherForecas
         {
             Date = DateTime.Now.AddDays(index),
             TemperatureC = rng.Next(-20, 55),
-            Summary = Summaries[rng.Next(Summaries.Length)]
+            Summary = Summaries[rng.Next(Summaries.Length)],
         });
     }
 }

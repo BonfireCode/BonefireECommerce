@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="GetTodos.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Application.Common.Models;
 using BonefireECommerce.Application.Common.Security;
 using BonefireECommerce.Domain.Enums;
@@ -31,7 +35,7 @@ public class GetTodosQueryHandler : IRequestHandler<GetTodosQuery, TodosVm>
                 .AsNoTracking()
                 .ProjectTo<TodoListDto>(_mapper.ConfigurationProvider)
                 .OrderBy(t => t.Title)
-                .ToListAsync(cancellationToken)
+                .ToListAsync(cancellationToken),
         };
     }
 }

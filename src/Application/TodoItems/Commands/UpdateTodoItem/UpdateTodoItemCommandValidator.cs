@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.TodoItems.Commands.UpdateTodoItem;
+﻿// <copyright file="UpdateTodoItemCommandValidator.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.TodoItems.Commands.UpdateTodoItem;
 
 public class UpdateTodoItemCommandValidator : AbstractValidator<UpdateTodoItemCommand>
 {

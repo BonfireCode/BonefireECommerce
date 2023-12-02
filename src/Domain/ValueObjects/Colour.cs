@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Domain.ValueObjects;
+﻿// <copyright file="Colour.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {
@@ -27,21 +31,21 @@ public class Colour : ValueObject
         return colour;
     }
 
-    public static Colour White => new("#FFFFFF");
+    public static Colour White => new ("#FFFFFF");
 
-    public static Colour Red => new("#FF5733");
+    public static Colour Red => new ("#FF5733");
 
-    public static Colour Orange => new("#FFC300");
+    public static Colour Orange => new ("#FFC300");
 
-    public static Colour Yellow => new("#FFFF66");
+    public static Colour Yellow => new ("#FFFF66");
 
-    public static Colour Green => new("#CCFF99");
+    public static Colour Green => new ("#CCFF99");
 
-    public static Colour Blue => new("#6666FF");
+    public static Colour Blue => new ("#6666FF");
 
-    public static Colour Purple => new("#9966CC");
+    public static Colour Purple => new ("#9966CC");
 
-    public static Colour Grey => new("#999999");
+    public static Colour Grey => new ("#999999");
 
     public string Code { get; private set; } = "#000000";
 

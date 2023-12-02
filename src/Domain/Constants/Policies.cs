@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Domain.Constants;
+﻿// <copyright file="Policies.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Domain.Constants;
 
 public abstract class Policies
 {

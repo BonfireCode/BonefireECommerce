@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// <copyright file="ApplicationDbContext.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Reflection;
 using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Domain.Entities;
 using BonefireECommerce.Infrastructure.Identity;
@@ -8,7 +12,10 @@ using Microsoft.EntityFrameworkCore;
 namespace BonefireECommerce.Infrastructure.Data;
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+    }
 
     public DbSet<TodoList> TodoLists => Set<TodoList>();
 

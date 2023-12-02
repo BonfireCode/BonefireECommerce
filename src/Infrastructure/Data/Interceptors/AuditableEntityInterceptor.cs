@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="AuditableEntityInterceptor.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -34,7 +38,10 @@ public class AuditableEntityInterceptor : SaveChangesInterceptor
 
     public void UpdateEntities(DbContext? context)
     {
-        if (context == null) return;
+        if (context == null)
+        {
+            return;
+        }
 
         foreach (var entry in context.ChangeTracker.Entries<BaseAuditableEntity>())
         {

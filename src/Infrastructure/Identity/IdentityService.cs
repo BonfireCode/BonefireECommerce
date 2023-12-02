@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="IdentityService.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

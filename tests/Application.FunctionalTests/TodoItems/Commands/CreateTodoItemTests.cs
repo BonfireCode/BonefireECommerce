@@ -1,11 +1,15 @@
-﻿using BonefireECommerce.Application.Common.Exceptions;
+﻿// <copyright file="CreateTodoItemTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Exceptions;
 using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
 using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
 using BonefireECommerce.Domain.Entities;
 
-using static Testing;
-
 namespace BonefireECommerce.Application.FunctionalTests.TodoItems.Commands;
+
+using static Testing;
 public class CreateTodoItemTests : BaseTestFixture
 {
     [Test]
@@ -24,13 +28,13 @@ public class CreateTodoItemTests : BaseTestFixture
 
         var listId = await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List"
+            Title = "New List",
         });
 
         var command = new CreateTodoItemCommand
         {
             ListId = listId,
-            Title = "Tasks"
+            Title = "Tasks",
         };
 
         var itemId = await SendAsync(command);

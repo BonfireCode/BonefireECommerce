@@ -185,6 +185,29 @@ csharp_style_prefer_tuple_swap = true:suggestion
 csharp_style_prefer_utf8_string_literals = true:suggestion
 
 #### Naming styles ####
+
+# SA1600: Elements should be documented
+dotnet_diagnostic.SA1600.severity = none
+
+# SA1101: Prefix local calls with this
+dotnet_diagnostic.SA1101.severity = none
+
+# SA1200: Using directives should be placed correctly
+dotnet_diagnostic.SA1200.severity = none
+
+# SA1309: Field names should not begin with underscore
+dotnet_diagnostic.SA1309.severity = none
+
+# SA1201: Elements should appear in the correct order
+dotnet_diagnostic.SA1201.severity = none
+csharp_style_allow_embedded_statements_on_same_line_experimental = true:silent
+dotnet_diagnostic.SA0001.severity = none
+
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = none
+dotnet_diagnostic.SA1117.severity = none
+dotnet_diagnostic.SA1601.severity = none
+
 [*.{cs,vb}]
 
 # Naming rules
@@ -376,3 +399,6 @@ dotnet_naming_style.s_camelcase.word_separator =
 dotnet_naming_style.s_camelcase.capitalization = camel_case
 
 dotnet_style_namespace_match_folder = true:suggestion
+tab_width = 4
+indent_size = 4
+end_of_line = lf

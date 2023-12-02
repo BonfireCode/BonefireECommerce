@@ -1,4 +1,8 @@
-﻿using FluentValidation.Results;
+﻿// <copyright file="ValidationException.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using FluentValidation.Results;
 
 namespace BonefireECommerce.Application.Common.Exceptions;
 public class ValidationException : Exception

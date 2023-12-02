@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Domain.Entities;
+﻿// <copyright file="TodoListConfiguration.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

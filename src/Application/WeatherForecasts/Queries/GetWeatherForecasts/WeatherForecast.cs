@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿// <copyright file="WeatherForecast.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public class WeatherForecast
 {

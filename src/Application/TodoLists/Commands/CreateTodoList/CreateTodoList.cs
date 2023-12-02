@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="CreateTodoList.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Domain.Entities;
 
 namespace BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;

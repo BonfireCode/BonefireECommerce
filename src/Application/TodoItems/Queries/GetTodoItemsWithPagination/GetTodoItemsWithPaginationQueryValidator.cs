@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+﻿// <copyright file="GetTodoItemsWithPaginationQueryValidator.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class GetTodoItemsWithPaginationQueryValidator : AbstractValidator<GetTodoItemsWithPaginationQuery>
 {

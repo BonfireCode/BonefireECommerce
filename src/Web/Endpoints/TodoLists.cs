@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
+﻿// <copyright file="TodoLists.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
 using BonefireECommerce.Application.TodoLists.Commands.DeleteTodoList;
 using BonefireECommerce.Application.TodoLists.Commands.UpdateTodoList;
 using BonefireECommerce.Application.TodoLists.Queries.GetTodos;
@@ -28,7 +32,11 @@ public class TodoLists : EndpointGroupBase
 
     public async Task<IResult> UpdateTodoList(ISender sender, int id, UpdateTodoListCommand command)
     {
-        if (id != command.Id) return Results.BadRequest();
+        if (id != command.Id)
+        {
+            return Results.BadRequest();
+        }
+
         await sender.Send(command);
         return Results.NoContent();
     }

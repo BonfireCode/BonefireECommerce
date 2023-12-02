@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="CreateTodoItem.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Domain.Entities;
 using BonefireECommerce.Domain.Events;
 
@@ -25,7 +29,7 @@ public class CreateTodoItemCommandHandler : IRequestHandler<CreateTodoItemComman
         {
             ListId = request.ListId,
             Title = request.Title,
-            Done = false
+            Done = false,
         };
 
         entity.AddDomainEvent(new TodoItemCreatedEvent(entity));

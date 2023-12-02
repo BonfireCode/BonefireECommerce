@@ -1,12 +1,17 @@
-﻿using BonefireECommerce.Application.Common.Exceptions;
+﻿// <copyright file="PurgeTodoListsTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Exceptions;
 using BonefireECommerce.Application.Common.Security;
 using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
 using BonefireECommerce.Application.TodoLists.Commands.PurgeTodoLists;
 using BonefireECommerce.Domain.Entities;
 
+namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
+
 using static Testing;
 
-namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
 public class PurgeTodoListsTests : BaseTestFixture
 {
     [Test]
@@ -52,17 +57,17 @@ public class PurgeTodoListsTests : BaseTestFixture
 
         await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List #1"
+            Title = "New List #1",
         });
 
         await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List #2"
+            Title = "New List #2",
         });
 
         await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List #3"
+            Title = "New List #3",
         });
 
         await SendAsync(new PurgeTodoListsCommand());

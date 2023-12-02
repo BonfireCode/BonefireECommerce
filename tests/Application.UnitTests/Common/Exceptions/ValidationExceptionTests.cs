@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Exceptions;
+﻿// <copyright file="ValidationExceptionTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Exceptions;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;

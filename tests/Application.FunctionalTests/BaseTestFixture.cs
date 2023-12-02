@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.FunctionalTests;
+﻿// <copyright file="BaseTestFixture.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.FunctionalTests;
 
 using static Testing;
 

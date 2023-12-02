@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Domain.Entities;
+﻿// <copyright file="TodoItemBriefDto.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Domain.Entities;
 
 namespace BonefireECommerce.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 public class TodoItemBriefDto

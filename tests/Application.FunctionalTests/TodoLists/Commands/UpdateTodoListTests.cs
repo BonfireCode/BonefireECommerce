@@ -1,11 +1,16 @@
-﻿using BonefireECommerce.Application.Common.Exceptions;
+﻿// <copyright file="UpdateTodoListTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Exceptions;
 using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
 using BonefireECommerce.Application.TodoLists.Commands.UpdateTodoList;
 using BonefireECommerce.Domain.Entities;
 
+namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
+
 using static Testing;
 
-namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
 public class UpdateTodoListTests : BaseTestFixture
 {
     [Test]
@@ -20,18 +25,18 @@ public class UpdateTodoListTests : BaseTestFixture
     {
         var listId = await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List"
+            Title = "New List",
         });
 
         await SendAsync(new CreateTodoListCommand
         {
-            Title = "Other List"
+            Title = "Other List",
         });
 
         var command = new UpdateTodoListCommand
         {
             Id = listId,
-            Title = "Other List"
+            Title = "Other List",
         };
 
         (await FluentActions.Invoking(() =>
@@ -47,13 +52,13 @@ public class UpdateTodoListTests : BaseTestFixture
 
         var listId = await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List"
+            Title = "New List",
         });
 
         var command = new UpdateTodoListCommand
         {
             Id = listId,
-            Title = "Updated List Title"
+            Title = "Updated List Title",
         };
 
         await SendAsync(command);

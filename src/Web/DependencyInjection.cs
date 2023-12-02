@@ -1,4 +1,8 @@
-﻿using Azure.Identity;
+﻿// <copyright file="DependencyInjection.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using Azure.Identity;
 using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Infrastructure.Data;
 using BonefireECommerce.Web.Services;
@@ -44,7 +48,6 @@ public static class DependencyInjection
         {
             configure.Title = "BonefireECommerce API";
 
-
             // Add the fluent validations schema processor
             var fluentValidationSchemaProcessor =
                 sp.CreateScope().ServiceProvider.GetRequiredService<FluentValidationSchemaProcessor>();
@@ -57,7 +60,7 @@ public static class DependencyInjection
                 Type = OpenApiSecuritySchemeType.ApiKey,
                 Name = "Authorization",
                 In = OpenApiSecurityApiKeyLocation.Header,
-                Description = "Type into the textbox: Bearer {your JWT token}."
+                Description = "Type into the textbox: Bearer {your JWT token}.",
             });
 
             configure.OperationProcessors.Add(new AspNetCoreOperationSecurityScopeProcessor("JWT"));

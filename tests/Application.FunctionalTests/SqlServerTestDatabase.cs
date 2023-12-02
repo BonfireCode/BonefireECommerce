@@ -1,4 +1,8 @@
-﻿using System.Data.Common;
+﻿// <copyright file="SqlServerTestDatabase.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Data.Common;
 using BonefireECommerce.Infrastructure.Data;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -40,7 +44,7 @@ public class SqlServerTestDatabase : ITestDatabase
 
         _respawner = await Respawner.CreateAsync(_connectionString, new RespawnerOptions
         {
-            TablesToIgnore = new Respawn.Graph.Table[] { "__EFMigrationsHistory" }
+            TablesToIgnore = new Respawn.Graph.Table[] { "__EFMigrationsHistory" },
         });
     }
 

@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Models;
+﻿// <copyright file="IIdentityService.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Models;
 
 namespace BonefireECommerce.Application.Common.Interfaces;
 public interface IIdentityService

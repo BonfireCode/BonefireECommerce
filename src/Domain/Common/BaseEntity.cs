@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿// <copyright file="BaseEntity.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BonefireECommerce.Domain.Common;
 public abstract class BaseEntity
@@ -7,7 +11,7 @@ public abstract class BaseEntity
     // Using non-generic integer types for simplicity
     public int Id { get; set; }
 
-    private readonly List<BaseEvent> _domainEvents = new();
+    private readonly List<BaseEvent> _domainEvents = new ();
 
     [NotMapped]
     public IReadOnlyCollection<BaseEvent> DomainEvents => _domainEvents.AsReadOnly();

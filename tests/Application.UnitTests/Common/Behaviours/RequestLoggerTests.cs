@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Behaviours;
+﻿// <copyright file="RequestLoggerTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Behaviours;
 using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;

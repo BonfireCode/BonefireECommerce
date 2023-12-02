@@ -1,8 +1,12 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="DeleteTodoItem.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Domain.Events;
 
 namespace BonefireECommerce.Application.TodoItems.Commands.DeleteTodoItem;
-public record DeleteTodoItemCommand(int Id) : IRequest;
+public record DeleteTodoItemCommand(int Id): IRequest;
 
 public class DeleteTodoItemCommandHandler : IRequestHandler<DeleteTodoItemCommand>
 {
@@ -26,5 +30,4 @@ public class DeleteTodoItemCommandHandler : IRequestHandler<DeleteTodoItemComman
 
         await _context.SaveChangesAsync(cancellationToken);
     }
-
 }

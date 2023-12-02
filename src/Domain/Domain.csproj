@@ -5,8 +5,16 @@
     <AssemblyName>BonefireECommerce.Domain</AssemblyName>
   </PropertyGroup>
 
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="MediatR" />
+    <PackageReference Include="StyleCop.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

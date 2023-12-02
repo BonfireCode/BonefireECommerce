@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="UpdateTodoItem.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 
 namespace BonefireECommerce.Application.TodoItems.Commands.UpdateTodoItem;
 public record UpdateTodoItemCommand : IRequest

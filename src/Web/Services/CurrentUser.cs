@@ -1,4 +1,8 @@
-﻿using System.Security.Claims;
+﻿// <copyright file="CurrentUser.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Security.Claims;
 
 using BonefireECommerce.Application.Common.Interfaces;
 

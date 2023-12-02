@@ -1,10 +1,17 @@
-﻿namespace BonefireECommerce.Application.Common.Models;
+﻿// <copyright file="PaginatedList.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.Common.Models;
 
 public class PaginatedList<T>
 {
     public IReadOnlyCollection<T> Items { get; }
+
     public int PageNumber { get; }
+
     public int TotalPages { get; }
+
     public int TotalCount { get; }
 
     public PaginatedList(IReadOnlyCollection<T> items, int count, int pageNumber, int pageSize)

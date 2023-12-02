@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="DependencyInjection.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 using BonefireECommerce.Domain.Constants;
 using BonefireECommerce.Infrastructure.Data;
 using BonefireECommerce.Infrastructure.Data.Interceptors;

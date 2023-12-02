@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Domain.Common;
+﻿// <copyright file="BaseAuditableEntity.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Domain.Common;
 
 public abstract class BaseAuditableEntity : BaseEntity
 {

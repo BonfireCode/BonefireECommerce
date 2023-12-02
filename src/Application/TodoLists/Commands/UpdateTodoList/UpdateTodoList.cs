@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Interfaces;
+﻿// <copyright file="UpdateTodoList.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Interfaces;
 
 namespace BonefireECommerce.Application.TodoLists.Commands.UpdateTodoList;
 public record UpdateTodoListCommand : IRequest
@@ -27,6 +31,5 @@ public class UpdateTodoListCommandHandler : IRequestHandler<UpdateTodoListComman
         entity.Title = request.Title;
 
         await _context.SaveChangesAsync(cancellationToken);
-
     }
 }

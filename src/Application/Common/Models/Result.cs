@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.Common.Models;
+﻿// <copyright file="Result.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.Common.Models;
 
 public class Result
 {

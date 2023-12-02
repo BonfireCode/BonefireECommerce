@@ -1,25 +1,12 @@
-﻿namespace BonefireECommerce.Domain.Common;
+﻿// <copyright file="ValueObject.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Domain.Common;
 
 // Learn more: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/implement-value-objects
 public abstract class ValueObject
 {
-    protected static bool EqualOperator(ValueObject left, ValueObject right)
-    {
-        if (left is null ^ right is null)
-        {
-            return false;
-        }
-
-        return left?.Equals(right!) != false;
-    }
-
-    protected static bool NotEqualOperator(ValueObject left, ValueObject right)
-    {
-        return !(EqualOperator(left, right));
-    }
-
-    protected abstract IEnumerable<object> GetEqualityComponents();
-
     public override bool Equals(object? obj)
     {
         if (obj == null || obj.GetType() != GetType())
@@ -37,4 +24,21 @@ public abstract class ValueObject
             .Select(x => x != null ? x.GetHashCode() : 0)
             .Aggregate((x, y) => x ^ y);
     }
+
+    protected static bool EqualOperator(ValueObject left, ValueObject right)
+    {
+        if (left is null ^ right is null)
+        {
+            return false;
+        }
+
+        return left?.Equals(right!) != false;
+    }
+
+    protected static bool NotEqualOperator(ValueObject left, ValueObject right)
+    {
+        return !EqualOperator(left, right);
+    }
+
+    protected abstract IEnumerable<object> GetEqualityComponents();
 }

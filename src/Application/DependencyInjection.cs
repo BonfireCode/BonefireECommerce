@@ -1,7 +1,12 @@
-﻿using System.Reflection;
+﻿// <copyright file="DependencyInjection.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Reflection;
 using BonefireECommerce.Application.Common.Behaviours;
 
 namespace Microsoft.Extensions.DependencyInjection;
+
 public static class DependencyInjection
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)

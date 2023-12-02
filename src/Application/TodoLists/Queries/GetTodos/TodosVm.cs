@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Models;
+﻿// <copyright file="TodosVm.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Models;
 
 namespace BonefireECommerce.Application.TodoLists.Queries.GetTodos;
 public class TodosVm

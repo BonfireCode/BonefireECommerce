@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Domain.Entities;
+﻿// <copyright file="TodoItem.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Domain.Entities;
 
 public class TodoItem : BaseAuditableEntity
 {
@@ -13,6 +17,7 @@ public class TodoItem : BaseAuditableEntity
     public DateTime? Reminder { get; set; }
 
     private bool _done;
+
     public bool Done
     {
         get => _done;

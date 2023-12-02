@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Models;
+﻿// <copyright file="TodoItems.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Models;
 using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
 using BonefireECommerce.Application.TodoItems.Commands.DeleteTodoItem;
 using BonefireECommerce.Application.TodoItems.Commands.UpdateTodoItem;
@@ -31,14 +35,22 @@ public class TodoItems : EndpointGroupBase
 
     public async Task<IResult> UpdateTodoItem(ISender sender, int id, UpdateTodoItemCommand command)
     {
-        if (id != command.Id) return Results.BadRequest();
+        if (id != command.Id)
+        {
+            return Results.BadRequest();
+        }
+
         await sender.Send(command);
         return Results.NoContent();
     }
 
     public async Task<IResult> UpdateTodoItemDetail(ISender sender, int id, UpdateTodoItemDetailCommand command)
     {
-        if (id != command.Id) return Results.BadRequest();
+        if (id != command.Id)
+        {
+            return Results.BadRequest();
+        }
+
         await sender.Send(command);
         return Results.NoContent();
     }

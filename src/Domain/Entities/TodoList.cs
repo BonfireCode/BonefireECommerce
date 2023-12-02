@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Domain.Entities;
+﻿// <copyright file="TodoList.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Domain.Entities;
 
 public class TodoList : BaseAuditableEntity
 {

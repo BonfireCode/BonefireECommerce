@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// <copyright file="WebApplicationExtensions.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Reflection;
 
 namespace BonefireECommerce.Web.Infrastructure;
 public static class WebApplicationExtensions

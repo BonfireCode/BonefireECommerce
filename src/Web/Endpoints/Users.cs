@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Infrastructure.Identity;
+﻿// <copyright file="Users.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Infrastructure.Identity;
 
 namespace BonefireECommerce.Web.Endpoints;
 public class Users : EndpointGroupBase

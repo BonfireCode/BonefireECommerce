@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Exceptions;
+﻿// <copyright file="CustomExceptionHandler.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +14,7 @@ public class CustomExceptionHandler : IExceptionHandler
     public CustomExceptionHandler()
     {
         // Register known exception types and handlers.
-        _exceptionHandlers = new()
+        _exceptionHandlers = new ()
             {
                 { typeof(ValidationException), HandleValidationException },
                 { typeof(NotFoundException), HandleNotFoundException },
@@ -41,7 +45,7 @@ public class CustomExceptionHandler : IExceptionHandler
         await httpContext.Response.WriteAsJsonAsync(new ValidationProblemDetails(exception.Errors)
         {
             Status = StatusCodes.Status400BadRequest,
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.1"
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.1",
         });
     }
 
@@ -56,7 +60,7 @@ public class CustomExceptionHandler : IExceptionHandler
             Status = StatusCodes.Status404NotFound,
             Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
             Title = "The specified resource was not found.",
-            Detail = exception.Message
+            Detail = exception.Message,
         });
     }
 
@@ -68,7 +72,7 @@ public class CustomExceptionHandler : IExceptionHandler
         {
             Status = StatusCodes.Status401Unauthorized,
             Title = "Unauthorized",
-            Type = "https://tools.ietf.org/html/rfc7235#section-3.1"
+            Type = "https://tools.ietf.org/html/rfc7235#section-3.1",
         });
     }
 
@@ -80,7 +84,7 @@ public class CustomExceptionHandler : IExceptionHandler
         {
             Status = StatusCodes.Status403Forbidden,
             Title = "Forbidden",
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.3"
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.3",
         });
     }
 }

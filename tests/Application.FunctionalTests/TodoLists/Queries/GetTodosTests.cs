@@ -1,10 +1,14 @@
-﻿using BonefireECommerce.Application.TodoLists.Queries.GetTodos;
+﻿// <copyright file="GetTodosTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.TodoLists.Queries.GetTodos;
 using BonefireECommerce.Domain.Entities;
 using BonefireECommerce.Domain.ValueObjects;
 
-using static Testing;
-
 namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Queries;
+
+using static Testing;
 public class GetTodosTests : BaseTestFixture
 {
     [Test]
@@ -29,15 +33,15 @@ public class GetTodosTests : BaseTestFixture
             Title = "Shopping",
             Colour = Colour.Blue,
             Items =
-                    {
-                        new TodoItem { Title = "Apples", Done = true },
-                        new TodoItem { Title = "Milk", Done = true },
-                        new TodoItem { Title = "Bread", Done = true },
-                        new TodoItem { Title = "Toilet paper" },
-                        new TodoItem { Title = "Pasta" },
-                        new TodoItem { Title = "Tissues" },
-                        new TodoItem { Title = "Tuna" }
-                    }
+                {
+                    new TodoItem { Title = "Apples", Done = true },
+                    new TodoItem { Title = "Milk", Done = true },
+                    new TodoItem { Title = "Bread", Done = true },
+                    new TodoItem { Title = "Toilet paper" },
+                    new TodoItem { Title = "Pasta" },
+                    new TodoItem { Title = "Tissues" },
+                    new TodoItem { Title = "Tuna" },
+                },
         });
 
         var query = new GetTodosQuery();

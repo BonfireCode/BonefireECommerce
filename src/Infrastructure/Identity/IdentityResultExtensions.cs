@@ -1,4 +1,8 @@
-﻿using BonefireECommerce.Application.Common.Models;
+﻿// <copyright file="IdentityResultExtensions.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace BonefireECommerce.Infrastructure.Identity;

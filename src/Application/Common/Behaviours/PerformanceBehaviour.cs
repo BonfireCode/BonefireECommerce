@@ -1,9 +1,14 @@
-﻿using System.Diagnostics;
+﻿// <copyright file="PerformanceBehaviour.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Diagnostics;
 using BonefireECommerce.Application.Common.Interfaces;
 using Microsoft.Extensions.Logging;
 
 namespace BonefireECommerce.Application.Common.Behaviours;
-public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
+public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    where TRequest : notnull
 {
     private readonly Stopwatch _timer;
     private readonly ILogger<TRequest> _logger;
@@ -43,7 +48,8 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
                 userName = await _identityService.GetUserNameAsync(userId);
             }
 
-            _logger.LogWarning("BonefireECommerce Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
+            _logger.LogWarning(
+                "BonefireECommerce Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@UserId} {@UserName} {@Request}",
                 requestName, elapsedMilliseconds, userId, userName, request);
         }
 

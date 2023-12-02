@@ -1,11 +1,16 @@
-﻿using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
+﻿// <copyright file="UpdateTodoItemTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
 using BonefireECommerce.Application.TodoItems.Commands.UpdateTodoItem;
 using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
 using BonefireECommerce.Domain.Entities;
 
+namespace BonefireECommerce.Application.FunctionalTests.TodoItems.Commands;
+
 using static Testing;
 
-namespace BonefireECommerce.Application.FunctionalTests.TodoItems.Commands;
 public class UpdateTodoItemTests : BaseTestFixture
 {
     [Test]
@@ -22,19 +27,19 @@ public class UpdateTodoItemTests : BaseTestFixture
 
         var listId = await SendAsync(new CreateTodoListCommand
         {
-            Title = "New List"
+            Title = "New List",
         });
 
         var itemId = await SendAsync(new CreateTodoItemCommand
         {
             ListId = listId,
-            Title = "New Item"
+            Title = "New Item",
         });
 
         var command = new UpdateTodoItemCommand
         {
             Id = itemId,
-            Title = "Updated Item Title"
+            Title = "Updated Item Title",
         };
 
         await SendAsync(command);

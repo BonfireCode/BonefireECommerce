@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// <copyright file="MappingTests.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using System.Reflection;
 using System.Runtime.Serialization;
 using AutoMapper;
 using BonefireECommerce.Application.Common.Interfaces;
@@ -44,7 +48,9 @@ public class MappingTests
     private object GetInstanceOf(Type type)
     {
         if (type.GetConstructor(Type.EmptyTypes) != null)
-            return Activator.CreateInstance(type)!;
+        {
+            return Activator.CreateInstance(type) !;
+        }
 
         // Type without parameterless constructor
         // TODO: Figure out an alternative approach to the now obsolete `FormatterServices.GetUninitializedObject` method.

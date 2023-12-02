@@ -1,4 +1,8 @@
-﻿namespace BonefireECommerce.Application.Common.Security;
+﻿// <copyright file="AuthorizeAttribute.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+namespace BonefireECommerce.Application.Common.Security;
 
 /// <summary>
 /// Specifies the class this attribute is applied to requires authorization.
@@ -9,7 +13,9 @@ public class AuthorizeAttribute : Attribute
     /// <summary>
     /// Initializes a new instance of the <see cref="AuthorizeAttribute"/> class. 
     /// </summary>
-    public AuthorizeAttribute() { }
+    public AuthorizeAttribute()
+    {
+    }
 
     /// <summary>
     /// Gets or sets a comma delimited list of roles that are allowed to access the resource.

@@ -1,4 +1,8 @@
-﻿using ValidationException = BonefireECommerce.Application.Common.Exceptions.ValidationException;
+﻿// <copyright file="ValidationBehaviour.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
+using ValidationException = BonefireECommerce.Application.Common.Exceptions.ValidationException;
 
 namespace BonefireECommerce.Application.Common.Behaviours;
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
@@ -27,8 +31,11 @@ public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TReque
                 .ToList();
 
             if (failures.Any())
+            {
                 throw new ValidationException(failures);
+            }
         }
+
         return await next();
     }
 }

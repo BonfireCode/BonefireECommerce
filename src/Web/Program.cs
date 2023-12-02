@@ -1,3 +1,7 @@
+﻿// <copyright file="Program.cs" company="Bonefire Code">
+// Copyright (c) Bonefire Code 🔥. All rights reserved.
+// </copyright>
+
 using BonefireECommerce.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -48,4 +52,6 @@ app.MapEndpoints();
 
 app.Run();
 
-public partial class Program { }
+public partial class Program
+{
+}
