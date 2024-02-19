@@ -6,10 +6,6 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using AutoMapper;
 using BonefireECommerce.Application.Common.Interfaces;
-using BonefireECommerce.Application.Common.Models;
-using BonefireECommerce.Application.TodoItems.Queries.GetTodoItemsWithPagination;
-using BonefireECommerce.Application.TodoLists.Queries.GetTodos;
-using BonefireECommerce.Domain.Entities;
 using NUnit.Framework;
 
 namespace BonefireECommerce.Application.UnitTests.Common.Mappings;

@@ -4,9 +4,6 @@
 
 using BonefireECommerce.Application.Common.Exceptions;
 using BonefireECommerce.Application.Common.Security;
-using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
-using BonefireECommerce.Application.TodoLists.Commands.PurgeTodoLists;
-using BonefireECommerce.Domain.Entities;
 
 namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
 

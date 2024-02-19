@@ -3,9 +3,6 @@
 // </copyright>
 
 using BonefireECommerce.Application.Common.Exceptions;
-using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
-using BonefireECommerce.Application.TodoLists.Commands.UpdateTodoList;
-using BonefireECommerce.Domain.Entities;
 
 namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
 

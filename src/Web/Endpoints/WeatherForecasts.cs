@@ -3,17 +3,15 @@
 // </copyright>
 
 using BonefireECommerce.Application.WeatherForecasts.Queries.GetWeatherForecasts;
-using Microsoft.AspNetCore.Authorization;
 
 namespace BonefireECommerce.Web.Endpoints;
 
-[AllowAnonymous]
 public class WeatherForecasts : EndpointGroupBase
 {
     public override void Map(WebApplication app)
     {
         app.MapGroup(this)
-            .RequireAuthorization()
+            .AllowAnonymous()
             .MapGet(GetWeatherForecasts);
     }
 

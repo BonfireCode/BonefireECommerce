@@ -2,11 +2,6 @@
 // Copyright (c) Bonefire Code 🔥. All rights reserved.
 // </copyright>
 
-using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
-using BonefireECommerce.Application.TodoItems.Commands.UpdateTodoItem;
-using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
-using BonefireECommerce.Domain.Entities;
-
 namespace BonefireECommerce.Application.FunctionalTests.TodoItems.Commands;
 
 using static Testing;

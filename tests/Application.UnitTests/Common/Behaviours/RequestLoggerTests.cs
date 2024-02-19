@@ -4,7 +4,6 @@
 
 using BonefireECommerce.Application.Common.Behaviours;
 using BonefireECommerce.Application.Common.Interfaces;
-using BonefireECommerce.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;

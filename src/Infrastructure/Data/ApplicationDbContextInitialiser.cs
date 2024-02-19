@@ -2,9 +2,7 @@
 // Copyright (c) Bonefire Code 🔥. All rights reserved.
 // </copyright>
 
-using System.Runtime.InteropServices;
 using BonefireECommerce.Domain.Constants;
-using BonefireECommerce.Domain.Entities;
 using BonefireECommerce.Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -47,6 +45,7 @@ public class ApplicationDbContextInitialiser
         try
         {
             await _context.Database.MigrateAsync();
+            //await _context.Database.EnsureCreatedAsync();
         }
         catch (Exception ex)
         {
@@ -88,25 +87,6 @@ public class ApplicationDbContextInitialiser
             {
                 await _userManager.AddToRolesAsync(administrator, new[] { administratorRole.Name });
             }
-        }
-
-        // Default data
-        // Seed, if necessary
-        if (!_context.TodoLists.Any())
-        {
-            _context.TodoLists.Add(new TodoList
-            {
-                Title = "Todo List",
-                Items =
-                {
-                    new TodoItem { Title = "Make a todo list 📃" },
-                    new TodoItem { Title = "Check off the first item ✅" },
-                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯" },
-                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆" },
-                },
-            });
-
-            await _context.SaveChangesAsync();
         }
     }
 }

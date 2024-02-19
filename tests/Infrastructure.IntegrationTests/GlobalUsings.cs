@@ -2,4 +2,3 @@
 // Copyright (c) Bonefire Code 🔥. All rights reserved.
 // </copyright>
 
-global using NUnit.Framework;

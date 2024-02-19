@@ -4,7 +4,6 @@
 
 using System.Reflection;
 using BonefireECommerce.Application.Common.Interfaces;
-using BonefireECommerce.Domain.Entities;
 using BonefireECommerce.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -16,10 +15,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
         : base(options)
     {
     }
-
-    public DbSet<TodoList> TodoLists => Set<TodoList>();
-
-    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

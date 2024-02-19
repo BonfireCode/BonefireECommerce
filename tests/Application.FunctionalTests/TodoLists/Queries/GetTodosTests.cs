@@ -2,10 +2,6 @@
 // Copyright (c) Bonefire Code 🔥. All rights reserved.
 // </copyright>
 
-using BonefireECommerce.Application.TodoLists.Queries.GetTodos;
-using BonefireECommerce.Domain.Entities;
-using BonefireECommerce.Domain.ValueObjects;
-
 namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Queries;
 
 using static Testing;

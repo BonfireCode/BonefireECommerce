@@ -2,10 +2,6 @@
 // Copyright (c) Bonefire Code 🔥. All rights reserved.
 // </copyright>
 
-using BonefireECommerce.Application.TodoLists.Commands.CreateTodoList;
-using BonefireECommerce.Application.TodoLists.Commands.DeleteTodoList;
-using BonefireECommerce.Domain.Entities;
-
 namespace BonefireECommerce.Application.FunctionalTests.TodoLists.Commands;
 
 using static Testing;

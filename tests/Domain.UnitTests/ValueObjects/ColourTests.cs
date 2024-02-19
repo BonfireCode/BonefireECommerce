@@ -2,8 +2,6 @@
 // Copyright (c) Bonefire Code 🔥. All rights reserved.
 // </copyright>
 
-using BonefireECommerce.Domain.Exceptions;
-using BonefireECommerce.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
